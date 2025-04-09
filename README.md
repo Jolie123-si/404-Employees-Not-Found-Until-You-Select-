@@ -3,8 +3,8 @@
 
 ## 👨🏽‍💻 Team Members
 
-- **Nabonyimana Jospin  26511**
-- **SIFA Jolie Blandine   26911**
+- **Nabonyimana Jospin  (26511)**
+- **SIFA Jolie Blandine   (26911)**
 
 ## 📚 Project Description
 
