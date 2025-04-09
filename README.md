@@ -79,7 +79,7 @@ SELECT
 FROM Employees;
 ```
 
-**Logic**: `LAG` helps compare the current employee's salary with the previous one **in the same department**. It works like looking at "who was before me?"
+**Logic**: `LAG` helps to compare the current employee's salary with the previous one **in the same department**. It works like looking at "who was before me?"
 
 ---
 
@@ -105,7 +105,7 @@ FROM Employees;
 
 ---
 
-## 🥇 Rank and Dense Rank by Salary
+## 🥇 Rank and Dense Rank by Salary.
 
 ```sql
 SELECT
@@ -125,7 +125,7 @@ FROM Employees;
 
 ---
 
-## 🏆 Top 3 Salaries per Department
+## 🏆 Top 3 Salaries per Department.
 
 ```sql
 WITH RankedEmployees AS (
@@ -145,7 +145,7 @@ WHERE Rank <= 3;
 
 ---
 
-## ⏳ First Two Employees to Join Each Department
+## ⏳ First Two Employees to Join Each Department.
 
 ```sql
 SELECT EmployeeID, EmployeeName, Department, JoinDate
@@ -171,7 +171,7 @@ WHERE ROWNUM <= 2;
 
 ---
 
-## 💰 Maximum Salary per Department and Overall
+## 💰 Maximum Salary per Department and Overall.
 
 ```sql
 SELECT
@@ -188,7 +188,7 @@ FROM Employees;
 
 ---
 
-## ⭐ Highlight Employees with Max Salary per Department
+## ⭐ Highlight Employees with Max Salary per Department.
 
 ```sql
 SELECT *
