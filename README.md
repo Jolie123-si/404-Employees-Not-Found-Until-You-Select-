@@ -4,7 +4,7 @@
 ## 👨🏽‍💻 Team Members
 
 - **Nabonyimana Jospin**
-- **Sifa Jolie Blandine**
+- **SIFA Jolie Blandine   26911**
 
 ## 📚 Project Description
 
@@ -15,7 +15,7 @@ This project demonstrates how to create and manipulate an `EMPLOYEES` table in O
 ## 🛠️ Technologies Used
 
 - **Oracle SQL Developer**
-- **Oracle PDB** (plassignment)
+- **Oracle PDB** (pl assignment)
 
 ---
 
@@ -217,7 +217,7 @@ This project showcases how analytical SQL functions can be used to simulate real
 - Ranking systems
 - Real-life insights for departments
 
-The work was successfully done as a collaboration between **Nabonyimana Jospin** and **Jolie**.
+The work was successfully done as a collaboration between **Nabonyimana Jospin** and **SIFA Jolie Blandine**.
 
 ---
 
