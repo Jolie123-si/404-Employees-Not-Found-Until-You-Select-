@@ -1,21 +1,25 @@
 # 🧠 The Curious Analyst: A Deep Dive into SQL with Windows Functions & Wisdom
-# Employee Data Analysis Project (Oracle SQL)
+# ✨ SELECT * FROM Legends
 
 ## 👨🏽‍💻 Team Members' names
 
-- **Nabonyimana Jospin  (26511)**
-- **SIFA Jolie Blandine   (26911)**
+- **Nabonyimana Jospin  (26511)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
+- **SIFA Jolie Blandine   (26911)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
+
+---
 
 ## 📚 Project Description
 
 This project demonstrates how to create and manipulate an `EMPLOYEES` table in Oracle SQL. It uses **analytical functions** like `RANK`, `DENSE_RANK`, `LAG`, `LEAD`, and others to perform powerful data analysis. The work reflects real-life HR tasks such as employee comparison, ranking, salary analysis, and department insights.
 
+💼 **Real-life Scenario**: Think of an HR system where you're asked to analyze performance, track salary changes, or find top performers in departments. This project replicates those everyday tasks through SQL.
+
 ---
 
 ## 🛠️ Technologies Used
 
-- **Oracle SQL Developer**
-- **Oracle PDB** (pl assignment)
+- ![Oracle](https://img.shields.io/badge/Oracle-SQL-red) **Oracle SQL Developer**
+- 🧪 **Oracle PDB** (PL assignment)
 
 ---
 
@@ -83,9 +87,7 @@ FROM Employees;
 ```
 ![WhatsApp Image 2025-04-10 at 11 16 01 AM](https://github.com/user-attachments/assets/30f8561f-b75a-4c9a-87ca-bf75f04264b0)
 
-
-
-**Logic**: `LAG` helps to compare the current employee's salary with the previous one **in the same department**. It works like looking at "who was before me?"
+📊 **Example**: This logic helps HR detect if a newly hired person is earning more than those already in the same department.
 
 ---
 
@@ -108,13 +110,11 @@ FROM Employees;
 ```
 ![Withnext](https://github.com/user-attachments/assets/725a1a19-eea3-4c4f-9d03-012957dd1b6a)
 
-
-
-**Logic**: `LEAD` works like asking "how does my salary compare to the one who comes after me?"
+🔍 **Scenario**: Used in team restructuring to assess if future peers earn more/less.
 
 ---
 
-## 🥇 Rank and Dense Rank by Salary.
+## 🥇 Rank and Dense Rank by Salary
 
 ```sql
 SELECT
@@ -128,14 +128,11 @@ FROM Employees;
 ```
 ![image](https://github.com/user-attachments/assets/1c8164b2-5e43-4ca5-bc7e-f00edaab9921)
 
-**Difference**:
-
-- `RANK()` skips numbers if there's a tie.
-- `DENSE_RANK()` gives continuous numbers even if there's a tie.
+🎯 **Example**: In a bonus scheme, if two employees have the same salary, `RANK()` vs `DENSE_RANK()` changes how bonuses are distributed.
 
 ---
 
-## 🏆 Top 3 Salaries per Department.
+## 🏆 Top 3 Salaries per Department
 
 ```sql
 WITH RankedEmployees AS (
@@ -152,11 +149,11 @@ WHERE Rank <= 3;
 ```
 ![image](https://github.com/user-attachments/assets/9b7e9cf9-b8c7-47e7-988c-ad2a89ae96db)
 
-**Use Case**: Useful in HR systems to find top performers in each department.
+📌 **Use Case**: HR wants to shortlist candidates for promotion based on top 3 earners in each department.
 
 ---
 
-## ⏳ First Two Employees to Join Each Department.
+## ⏳ First Two Employees to Join Each Department
 
 ```sql
 SELECT EmployeeID, EmployeeName, Department, JoinDate
@@ -179,11 +176,11 @@ WHERE ROWNUM <= 2;
 ```
 ![image (1)](https://github.com/user-attachments/assets/7b4e26f0-c6da-42b7-aa2f-55ed2ac85d8f)
 
-**Logic**: Retrieves the earliest joiners (based on `JoinDate`) in each department.
+📅 **Use Case**: Identifying employees eligible for long-service awards.
 
 ---
 
-## 💰 Maximum Salary per Department and Overall.
+## 💰 Maximum Salary per Department and Overall
 
 ```sql
 SELECT
@@ -197,11 +194,11 @@ FROM Employees;
 ```
 ![image](https://github.com/user-attachments/assets/577d56a2-6351-4442-8cf9-d1fd7095c976)
 
-**Real Case**: HR may use this to benchmark salary limits by team and across the company.
+🏢 **Example**: HR benchmarking salaries internally and against market standards.
 
 ---
 
-## ⭐ Highlight Employees with Max Salary per Department.
+## ⭐ Highlight Employees with Max Salary per Department
 
 ```sql
 SELECT *
@@ -218,7 +215,7 @@ WHERE Salary = MaxSalaryPerDept;
 ```
 ![image](https://github.com/user-attachments/assets/2eb5235d-ca30-42b1-a202-6ec1a9cfc225)
 
-**Purpose**: This isolates employees earning the top salary in their team — e.g., for recognition or review.
+🏆 **Real-world Match**: Recognizing top contributors during performance reviews.
 
 ---
 
@@ -226,13 +223,13 @@ WHERE Salary = MaxSalaryPerDept;
 
 This project showcases how analytical SQL functions can be used to simulate real-world HR data analysis. We practiced:
 
-- Data organization
-- Comparison logic
-- Ranking systems
-- Real-life insights for departments
+- 🧩 Data organization
+- 🔍 Comparison logic
+- 🥇 Ranking systems
+- 🌍 Real-life insights for departments
 
-The work was successfully done as a collaboration between **Nabonyimana Jospin** and **SIFA Jolie Blandine**.
+> 👥 Done with great teamwork by **Nabonyimana Jospin** and **SIFA Jolie Blandine**.
 
+🚀 *Powering smarter HR with SQL!*
+# Employee Data Analysis Project (Oracle SQL)
 ---
-
-
