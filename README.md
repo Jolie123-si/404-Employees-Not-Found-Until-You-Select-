@@ -128,6 +128,11 @@ FROM Employees;
 ```
 ![image](https://github.com/user-attachments/assets/1c8164b2-5e43-4ca5-bc7e-f00edaab9921)
 
+**Difference**:
+
+- `RANK()` skips numbers if there's a tie.
+- `DENSE_RANK()` gives continuous numbers even if there's a tie.
+
 🎯 **Example**: In a bonus scheme, if two employees have the same salary, `RANK()` vs `DENSE_RANK()` changes how bonuses are distributed.
 
 ---
