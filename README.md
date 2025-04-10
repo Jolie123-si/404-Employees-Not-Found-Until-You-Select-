@@ -1,6 +1,6 @@
 # SQLassic Park: Where Queries Roam Free
 
-
+## 🧠 The Curious Analyst: A Deep Dive into SQL with Windows Functions & Wisdom
 ## 👨🏽‍💻 Team Members' names
 
 - **Nabonyimana Jospin  (26511)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
