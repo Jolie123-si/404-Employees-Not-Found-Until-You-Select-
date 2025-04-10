@@ -150,6 +150,7 @@ WITH RankedEmployees AS (
 SELECT * FROM RankedEmployees
 WHERE Rank <= 3;
 ```
+![image](https://github.com/user-attachments/assets/9b7e9cf9-b8c7-47e7-988c-ad2a89ae96db)
 
 **Use Case**: Useful in HR systems to find top performers in each department.
 
@@ -176,6 +177,7 @@ FROM (
 )
 WHERE ROWNUM <= 2;
 ```
+![image (1)](https://github.com/user-attachments/assets/7b4e26f0-c6da-42b7-aa2f-55ed2ac85d8f)
 
 **Logic**: Retrieves the earliest joiners (based on `JoinDate`) in each department.
 
@@ -193,6 +195,7 @@ SELECT
     MAX(Salary) OVER () AS MaxSalaryOverall
 FROM Employees;
 ```
+![image](https://github.com/user-attachments/assets/577d56a2-6351-4442-8cf9-d1fd7095c976)
 
 **Real Case**: HR may use this to benchmark salary limits by team and across the company.
 
