@@ -1,5 +1,5 @@
+# SQLassic Park: Where Queries Roam Free
 
-# ✨ SELECT * FROM Legends
 
 ## 👨🏽‍💻 Team Members' names
 
