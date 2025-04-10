@@ -126,6 +126,7 @@ SELECT
     DENSE_RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS DenseRank
 FROM Employees;
 ```
+![image](https://github.com/user-attachments/assets/1c8164b2-5e43-4ca5-bc7e-f00edaab9921)
 
 **Difference**:
 
