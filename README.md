@@ -42,6 +42,13 @@ CREATE TABLE EMPLOYEES (
 ```
 ![Creation of table-Employees](https://github.com/user-attachments/assets/62bb39ea-efb2-445a-ad20-cb781376f31b)
 
+
+![Best Practice](https://img.shields.io/badge/Reminder-Best%20Practice-yellow)
+
+> 🔎 **Quick Note:** Always check if the table already exists before trying to create it.  
+> It avoids duplicate table errors and keeps your schema clean!
+
+
 ---
 
 ## 📥 Data Insertion
