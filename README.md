@@ -4,7 +4,7 @@
 ## 👨🏽‍💻 Team Members' names
 
 - **Nabonyimana Jospin  (26511)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
-- **SIFA Jolie Blandine   (26911)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
+- **Jolie Blandine SIFA   (26911)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
 
 ---
 
@@ -233,7 +233,7 @@ This project showcases how analytical SQL functions can be used to simulate real
 - 🥇 Ranking systems
 - 🌍 Real-life insights for departments
 
-> 👥 Done with great teamwork by **Nabonyimana Jospin** and **SIFA Jolie Blandine**.
+> 👥 Done with great teamwork by **Nabonyimana Jospin** and **Jolie Blandine SIFA**.
 
 🚀 *Powering smarter HR with SQL!*
 # Employees Data Analysis Project (Oracle SQL)
