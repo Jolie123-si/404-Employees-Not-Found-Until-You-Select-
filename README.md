@@ -81,7 +81,8 @@ SELECT
     END AS ComparisonWithPrev
 FROM Employees;
 ```
-![Compwithprev](https://github.com/user-attachments/assets/96ea04ab-7786-46fb-bb9d-d3110833c3f2)
+![WhatsApp Image 2025-04-10 at 11 16 01 AM](https://github.com/user-attachments/assets/30f8561f-b75a-4c9a-87ca-bf75f04264b0)
+
 
 
 **Logic**: `LAG` helps to compare the current employee's salary with the previous one **in the same department**. It works like looking at "who was before me?"
@@ -105,7 +106,8 @@ SELECT
     END AS ComparisonWithNext
 FROM Employees;
 ```
-![Compwithnext](https://github.com/user-attachments/assets/01db18e6-87ab-46c7-99cf-4693bad44843)
+![Withnext](https://github.com/user-attachments/assets/725a1a19-eea3-4c4f-9d03-012957dd1b6a)
+
 
 
 **Logic**: `LEAD` works like asking "how does my salary compare to the one who comes after me?"
