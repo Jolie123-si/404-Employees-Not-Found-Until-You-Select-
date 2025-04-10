@@ -60,6 +60,7 @@ INSERT INTO EMPLOYEES VALUES (7, 'Grace', 'HR', 7000, TO_DATE('2020-11-30', 'YYY
 ```sql
 SELECT * FROM EMPLOYEES;
 ```
+![WhatsApp Image 2025-04-10 at 11 09 05 AM](https://github.com/user-attachments/assets/59af1daf-f013-4f2b-9479-268edbe1c367)
 
 ---
 
