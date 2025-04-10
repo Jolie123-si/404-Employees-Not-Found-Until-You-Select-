@@ -221,7 +221,7 @@ WHERE Salary = MaxSalaryPerDept;
 
 ## ✅ Conclusion
 
-This project showcases how analytical SQL functions can be used to simulate real-world HR data analysis. We practiced:
+This project showcases how analytical SQL functions can be used to simulate real-world HR data analysis, We practiced:
 
 - 🧩 Data organization
 - 🔍 Comparison logic
