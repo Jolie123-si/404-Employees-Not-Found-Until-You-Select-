@@ -216,6 +216,7 @@ FROM (
 )
 WHERE Salary = MaxSalaryPerDept;
 ```
+![image](https://github.com/user-attachments/assets/2eb5235d-ca30-42b1-a202-6ec1a9cfc225)
 
 **Purpose**: This isolates employees earning the top salary in their team — e.g., for recognition or review.
 
