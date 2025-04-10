@@ -1,5 +1,5 @@
 # 🧠 The Curious Analyst: A Deep Dive into SQL with Windows Functions & Wisdom
-# Employee Data Analysis Project (Oracle SQL)
+# ✨SELECT * FROM Legends
 
 ## 👨🏽‍💻 Team Members' names
 
@@ -234,5 +234,5 @@ This project showcases how analytical SQL functions can be used to simulate real
 The work was successfully done as a collaboration between **Nabonyimana Jospin** and **SIFA Jolie Blandine**.
 
 ---
-
+# Employee Data Analysis Project (Oracle SQL)
 
