@@ -1,7 +1,7 @@
 # 🧠 The Curious Analyst: A Deep Dive into SQL with Windows Functions & Wisdom
 # Employee Data Analysis Project (Oracle SQL)
 
-## 👨🏽‍💻 Team Members
+## 👨🏽‍💻 Team Members' names
 
 - **Nabonyimana Jospin  (26511)**
 - **SIFA Jolie Blandine   (26911)**
