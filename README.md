@@ -36,6 +36,7 @@ CREATE TABLE EMPLOYEES (
     JoinDate DATE
 );
 ```
+![Creation of table-Employees](https://github.com/user-attachments/assets/62bb39ea-efb2-445a-ad20-cb781376f31b)
 
 ---
 
@@ -50,6 +51,7 @@ INSERT INTO EMPLOYEES VALUES (5, 'Eve', 'HR', 7500, TO_DATE('2022-01-05', 'YYYY-
 INSERT INTO EMPLOYEES VALUES (6, 'Frank', 'HR', 7200, TO_DATE('2021-08-14', 'YYYY-MM-DD'));
 INSERT INTO EMPLOYEES VALUES (7, 'Grace', 'HR', 7000, TO_DATE('2020-11-30', 'YYYY-MM-DD'));
 ```
+![Populating table with data](https://github.com/user-attachments/assets/5bf54398-d41f-42a0-a926-c1fb05218af0)
 
 ---
 
@@ -78,6 +80,8 @@ SELECT
     END AS ComparisonWithPrev
 FROM Employees;
 ```
+![Compwithprev](https://github.com/user-attachments/assets/96ea04ab-7786-46fb-bb9d-d3110833c3f2)
+
 
 **Logic**: `LAG` helps to compare the current employee's salary with the previous one **in the same department**. It works like looking at "who was before me?"
 
@@ -100,6 +104,8 @@ SELECT
     END AS ComparisonWithNext
 FROM Employees;
 ```
+![Compwithnext](https://github.com/user-attachments/assets/01db18e6-87ab-46c7-99cf-4693bad44843)
+
 
 **Logic**: `LEAD` works like asking "how does my salary compare to the one who comes after me?"
 
