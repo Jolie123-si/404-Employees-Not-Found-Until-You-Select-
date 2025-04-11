@@ -81,7 +81,7 @@ This file explains the reasoning behind each SQL function and operation used in 
 
 ## -- CHECKING FIRST WHETHER THERE IS NO TABLE CALLED EMPLOYEES WHICH EXISTS ALREADY
 
-
+```sql
 SELECT table_name 
 FROM user_tables
 WHERE table_name = 'EMPLOYEES';
@@ -96,11 +96,12 @@ CREATE TABLE EMPLOYEES (
     Salary NUMBER(8, 2),
     JoinDate DATE
 );
-
+```
 ## --POPULATING A TABLE
 
 
 -- Insert the first row
+```sql
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (1, 'Alice', 'IT', 9000, TO_DATE('2021-03-15', 'YYYY-MM-DD'));
 
@@ -127,15 +128,15 @@ VALUES (6, 'Frank', 'HR', 7200, TO_DATE('2021-08-14', 'YYYY-MM-DD'));
 -- Insert the seventh row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (7, 'Grace', 'HR', 7000, TO_DATE('2020-11-30', 'YYYY-MM-DD'));
-
+```
 --VIEWING ALL THE TABLE
 
-
+```sql
 SELECT * FROM EMPLOYEES;
-
+```
 ## --COMPARISON WITH PREVIOUS SALARY
 
-
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -149,10 +150,10 @@ SELECT
         ELSE 'EQUAL' 
     END AS ComparisonWithPrev
 FROM Employees;
-
+```
 ## --COMPARISON WITH NEXT SALARY
 
-
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -166,10 +167,10 @@ SELECT
         ELSE 'EQUAL' 
     END AS ComparisonWithNext
 FROM Employees;
-
+```
 ## --RANK AND DENSE RANK OF SALARIES WITHIN DEPARTMENTS
 
-
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -178,10 +179,10 @@ SELECT
     RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS Rank,
     DENSE_RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS DenseRank
 FROM Employees;
-
+```
 ## --IDENTIFYING TOP THREE SALARIES PER DEPARTMENT
 
-
+```sql
 WITH RankedEmployees AS (
     SELECT 
         EmployeeID, 
@@ -193,10 +194,10 @@ WITH RankedEmployees AS (
 )
 SELECT * FROM RankedEmployees
 WHERE Rank <= 3;
-
+```
 ## --FINDING THE FIRST TWO EMPLOYEES TO JOIN PER DEPARTMENT
 
-
+```sql
 SELECT EmployeeID, EmployeeName, Department, JoinDate
 FROM (
     SELECT EmployeeID, EmployeeName, Department, JoinDate
@@ -215,12 +216,12 @@ FROM
     ORDER BY Department, JoinDate
 )
 WHERE ROWNUM <= 2;
-
+```
 
 
 ## --FINDING MAXIMUM SALARY PER DEPARTMENT AND OVERALL
 
-
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -229,10 +230,10 @@ SELECT
     MAX(Salary) OVER (PARTITION BY Department) AS MaxSalaryPerDept,
     MAX(Salary) OVER () AS MaxSalaryOverall
 FROM Employees;
-
+```
 --HIGHLIGHTING EMPLOYEES WITH THE MAXIMUM SALARIES IN THEIR DEPARTMENT
 
-
+```sql
 SELECT *
 FROM (
     SELECT 
@@ -244,7 +245,7 @@ FROM (
     FROM Employees
 )
 WHERE Salary = MaxSalaryPerDept;
-
+```
 
 
 
