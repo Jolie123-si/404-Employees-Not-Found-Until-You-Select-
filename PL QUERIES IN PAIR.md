@@ -1,6 +1,8 @@
-**📄 Employee SQL Analysis — Theoretical Breakdown**
+---
 
-This document provides a descriptive and detailed explanation of the operations carried out in the **Employee Data Analysis** project using Oracle SQL. All SQL code logic is excluded here, with the focus on conceptual understanding.
+# 📄 Employee SQL Analysis — Theoretical Breakdown
+
+This document provides a descriptive and detailed explanation of the operations carried out in the **Employee Data Analysis** project using Oracle SQL. All SQL code logic is placed below, while the focus here remains on conceptual understanding.
 
 ---
 
@@ -77,18 +79,19 @@ Finally, we highlighted employees who earn the **maximum salary within their dep
 ### 🧠 Summary
 This file explains the reasoning behind each SQL function and operation used in our employee data project. It's designed to provide clarity for collaborators, teachers, or HR professionals interested in the *why* behind the *what*.
 
-# QUERIES
+---
 
-## -- CHECKING FIRST WHETHER THERE IS NO TABLE CALLED EMPLOYEES WHICH EXISTS ALREADY
+## 🔧 SQL QUERIES
 
-
+### -- Checking if the 'EMPLOYEES' Table Exists
+```sql
 SELECT table_name 
 FROM user_tables
 WHERE table_name = 'EMPLOYEES';
+```
 
-## --CREATING A TABLE
-
-
+### -- Creating the Table
+```sql
 CREATE TABLE EMPLOYEES (
     EmployeeID INT PRIMARY KEY,
     EmployeeName VARCHAR2(100),
@@ -96,46 +99,39 @@ CREATE TABLE EMPLOYEES (
     Salary NUMBER(8, 2),
     JoinDate DATE
 );
+```
 
-## --POPULATING A TABLE
-
-
--- Insert the first row
+### -- Populating the Table
+```sql
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (1, 'Alice', 'IT', 9000, TO_DATE('2021-03-15', 'YYYY-MM-DD'));
 
--- Insert the second row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (2, 'Bob', 'IT', 8500, TO_DATE('2020-07-10', 'YYYY-MM-DD'));
 
--- Insert the third row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (3, 'Charlie', 'IT', 8500, TO_DATE('2021-06-20', 'YYYY-MM-DD'));
 
--- Insert the fourth row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (4, 'David', 'IT', 8000, TO_DATE('2019-09-25', 'YYYY-MM-DD'));
 
--- Insert the fifth row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (5, 'Eve', 'HR', 7500, TO_DATE('2022-01-05', 'YYYY-MM-DD'));
 
--- Insert the sixth row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (6, 'Frank', 'HR', 7200, TO_DATE('2021-08-14', 'YYYY-MM-DD'));
 
--- Insert the seventh row
 INSERT INTO EMPLOYEES (EmployeeID, EmployeeName, Department, Salary, JoinDate)
 VALUES (7, 'Grace', 'HR', 7000, TO_DATE('2020-11-30', 'YYYY-MM-DD'));
+```
 
---VIEWING ALL THE TABLE
-
-
+### -- Viewing the Table
+```sql
 SELECT * FROM EMPLOYEES;
+```
 
-## --COMPARISON WITH PREVIOUS SALARY
-
-
+### -- Salary Comparison with Previous Employee (LAG)
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -149,10 +145,10 @@ SELECT
         ELSE 'EQUAL' 
     END AS ComparisonWithPrev
 FROM Employees;
+```
 
-## --COMPARISON WITH NEXT SALARY
-
-
+### -- Salary Comparison with Next Employee (LEAD)
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -166,10 +162,10 @@ SELECT
         ELSE 'EQUAL' 
     END AS ComparisonWithNext
 FROM Employees;
+```
 
-## --RANK AND DENSE RANK OF SALARIES WITHIN DEPARTMENTS
-
-
+### -- Rank and Dense Rank within Departments
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -178,10 +174,10 @@ SELECT
     RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS Rank,
     DENSE_RANK() OVER (PARTITION BY Department ORDER BY Salary DESC) AS DenseRank
 FROM Employees;
+```
 
-## --IDENTIFYING TOP THREE SALARIES PER DEPARTMENT
-
-
+### -- Top 3 Earners per Department
+```sql
 WITH RankedEmployees AS (
     SELECT 
         EmployeeID, 
@@ -193,10 +189,10 @@ WITH RankedEmployees AS (
 )
 SELECT * FROM RankedEmployees
 WHERE Rank <= 3;
+```
 
-## --FINDING THE FIRST TWO EMPLOYEES TO JOIN PER DEPARTMENT
-
-
+### -- First Two Joiners per Department
+```sql
 SELECT EmployeeID, EmployeeName, Department, JoinDate
 FROM (
     SELECT EmployeeID, EmployeeName, Department, JoinDate
@@ -207,20 +203,17 @@ FROM (
 WHERE ROWNUM <= 2
 UNION ALL
 SELECT EmployeeID, EmployeeName, Department, JoinDate
-FROM 
-(
+FROM (
     SELECT EmployeeID, EmployeeName, Department, JoinDate
     FROM Employees
     WHERE Department = 'HR'
     ORDER BY Department, JoinDate
 )
 WHERE ROWNUM <= 2;
+```
 
-
-
-## --FINDING MAXIMUM SALARY PER DEPARTMENT AND OVERALL
-
-
+### -- Maximum Salary per Department and Overall
+```sql
 SELECT 
     EmployeeID, 
     EmployeeName, 
@@ -229,10 +222,10 @@ SELECT
     MAX(Salary) OVER (PARTITION BY Department) AS MaxSalaryPerDept,
     MAX(Salary) OVER () AS MaxSalaryOverall
 FROM Employees;
+```
 
---HIGHLIGHTING EMPLOYEES WITH THE MAXIMUM SALARIES IN THEIR DEPARTMENT
-
-
+### -- Highlighting Employees with Max Salary in Their Department
+```sql
 SELECT *
 FROM (
     SELECT 
@@ -244,9 +237,4 @@ FROM (
     FROM Employees
 )
 WHERE Salary = MaxSalaryPerDept;
-
-
-
-
-
-
+```
