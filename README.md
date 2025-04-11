@@ -1,6 +1,6 @@
-# SQLassic Park: Where Queries Roam Free
+# 🧠 404 Employees Not Found(Until you Select)
 
-## 🧠 404 Employees Not Found(Until you Select)
+## SQLassic Park: Where Queries Roam Free
 ## 👨🏽‍💻 Team Members' names
 
 - **Nabonyimana Jospin  (26511)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
