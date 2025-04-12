@@ -40,7 +40,7 @@ We used both ranking functions to sort employees by salary within departments:
 
 RANK() introduces gaps if there are ties.
 
-DENSE_RANK() assigns consecutive ranks even when ties occur.
+DENSE_RANK() assigns consecutive ranks even when ties occurs.
 
 These tools are useful for defining tiers, such as performance bands or eligibility for promotions.
 
