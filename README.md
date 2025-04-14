@@ -8,7 +8,7 @@
 
 ---
 
-## 📚 Project Description
+## 📚 Project Descriptions
 
 This project demonstrates how to create and manipulate an `EMPLOYEES` table in Oracle SQL. It uses **analytical functions** like `RANK`, `DENSE_RANK`, `LAG`, `LEAD`, and others to perform powerful data analysis. The work reflects real-life HR tasks such as employee comparison, ranking, salary analysis, and department insights.
 
