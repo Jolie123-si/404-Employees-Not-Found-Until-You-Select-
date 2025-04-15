@@ -7,8 +7,9 @@
 - **Jolie Blandine SIFA   (26911)**  ![Badge](https://img.shields.io/badge/Team-Member-green)
 
 ---
-
 ## 📚 Project Descriptions
+
+This document provides a descriptive and detailed explanation of the operations carried out in the **Employee Data Analysis** project using Oracle SQL. All SQL code logic is excluded here, with the focus on conceptual understanding.
 
 This project demonstrates how to create and manipulate an `EMPLOYEES` table in Oracle SQL. It uses **analytical functions** like `RANK`, `DENSE_RANK`, `LAG`, `LEAD`, and others to perform powerful data analysis. The work reflects real-life HR tasks such as employee comparison, ranking, salary analysis, and department insights.
 
